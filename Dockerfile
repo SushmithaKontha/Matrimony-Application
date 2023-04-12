@@ -1,7 +1,7 @@
-FROM openjdk:17
+FROM java:17
 
 EXPOSE 9090
 
-ADD target/Matrimony-Application.jar Matrimony-Application.jar
+ADD target/Matrimony-Application.war Matrimony-Application.war
 
-ENTRYPOINT ["java","-jar", "Matrimony-Application.jar"]
+ENTRYPOINT ["java","-war", "Matrimony-Application.war"]
